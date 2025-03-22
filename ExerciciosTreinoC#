@@ -1,0 +1,119 @@
+using System;
+
+// L02- EX 03, 07
+      
+      
+public class LISTAS
+{
+      public static void Main()
+      {
+             #region EX03_07,L02
+      // Solicite o valor de uma compra. Se for maior que R$ 100, aplique 10% de desconto. EXERCICIO 3
+            
+            
+            //Console.WriteLine("Digite o valor de sua compra");
+            //double valor = float.Parse(Console.ReadLine());
+            //double valordesconto = valor-(valor * 0.10);
+            
+            //if ( valor > 100)
+            //{
+            //    Console.WriteLine("Você ganhou um desconto de 10%, sua compra ficou no valor de:" + valordesconto);
+                  
+            //}
+            //else
+            //{
+            //Console.WriteLine("O valor da compra ficou no valor de R$:" + valor); 
+            //}
+ 
+
+            
+            
+//    }
+      
+      
+            //Leia três números inteiros e diga qual é o maior entre eles.
+
+            //Console.WriteLine("Digite o primeiro número");
+            //int valor1 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Digite o Segundo número");
+            //int valor2 = int.Parse(Console.ReadLine());
+            
+            //Console.WriteLine("Digite o terceiro número");
+            //int valor3 = int.Parse(Console.ReadLine());
+            
+            //if (valor1 > valor2 && valor1 > valor3)
+//{
+ //   Console.WriteLine("O numero maior é " + valor1);
+//}
+//else if (valor2 > valor1 && valor2 > valor3)
+//{
+//    Console.WriteLine("O numero maior é " + valor2);
+//}
+//else if (valor3 > valor1 && valor3 > valor2)
+//{
+  //  Console.WriteLine("O numero maior é " + valor3);
+      
+//}
+            #endregion
+                  
+                   #region EX09,010_L03
+//9 . Peça dois números inteiros e exiba todos os números entre eles (inclusive), em ordem crescente.
+
+//    Console.WriteLine("Digite o primeiro numero");
+      
+//    int numero1 = int.Parse(Console.ReadLine());
+
+      //    Console.WriteLine("Digite o segundo número");
+            // int numero2 = int.Parse(Console.ReadLine());
+            
+            
+            // int minimo = Math.Min(numero1,numero2);
+            // int maximo = Math.Max(numero1,numero2);
+            
+            // int i;
+            // for ( i = minimo; i <= maximo; i++)
+            // {
+                  
+                  // Console.WriteLine(i + " ");
+
+                        
+            //}
+            
+                                      
+
+                   //10. Peça um número e mostre sua contagem regressiva até zero.
+                  
+            //     Console.WriteLine("Digite um numero");
+             //int numero = int.Parse(Console.ReadLine());
+                  
+            // int i = numero;
+            // for (; i > 0; i--)
+            // Console.WriteLine(i + "");
+      #endregion
+                  
+                   #region EX04,08,L04.
+                     //4. Solicite um número e exiba sua tabuada de 1 a 10 usando `while`.
+                  
+                   Console.WriteLine("Digite o numero que deseja multiplicar");
+                                             int numero = int.Parse(Console.ReadLine());
+            int i =1 ;
+      
+            
+            while (  i <= 10)
+            {
+                  int resultado = numero * i;
+ Console.WriteLine( resultado + "");
+      i++;
+                  
+                  
+                  // 8. Solicite dois números inteiros. Mostre todos os números entre eles, do menor para o maior, usando `while`.
+                  
+                  // LISTA 05 - 7-1
+                  
+                  // LISTA 6 - 2 5
+      }
+
+      }
+}
+#endregion
+
