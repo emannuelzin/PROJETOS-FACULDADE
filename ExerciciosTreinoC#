@@ -12,7 +12,7 @@ public class LISTAS
             
             
             //Console.WriteLine("Digite o valor de sua compra");
-            //double valor = float.Parse(Console.ReadLine());
+            //double valor = double.Parse(Console.ReadLine());
             //double valordesconto = valor-(valor * 0.10);
             
             //if ( valor > 100)
