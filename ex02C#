@@ -1,0 +1,267 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http.Headers;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            #region LISTA1
+
+            /* Peça ao usuário um número decimal e mostre a parte inteira e a parte decimal separadamente.
+
+            Console.WriteLine("Digite um número decimal: ");
+            float numero = float.Parse(Console.ReadLine());
+            float parteInteira = (int)numero;
+
+            float parteDecimal = numero - parteInteira;
+            Console.WriteLine("A parte inteira é: " + parteInteira);
+            Console.WriteLine("A parte decimal é: " + parteDecimal);
+            */
+
+            /*   Console.WriteLine("Digite seu nome:");
+
+               string nome = Console.ReadLine();
+               Console.WriteLine("Digite sua idade:");
+               int idade = int.Parse(Console.ReadLine());
+               Console.WriteLine("Digite seu salário:");
+               float salario = float.Parse(Console.ReadLine());
+
+               Console.Clear();
+               Console.WriteLine("Nome: " + nome);
+               Console.WriteLine("Idade:  " + idade);
+
+
+
+               Console.WriteLine("Salário : " + salario);
+            */
+            #endregion
+
+            #region LISTA2
+
+            //  Leia dois números inteiros e informe qual é o maior.
+            /*   Console.WriteLine("Digite o 1º número");
+               int numero1 = int.Parse(Console.ReadLine());
+               Console.WriteLine("Digite o 2º número");
+               int numero2 = int.Parse(Console.ReadLine());
+
+               if (numero1 > numero2)
+               {
+                   Console.WriteLine("O número  maior é o" + numero1);
+
+
+               }
+               else
+               {
+
+                   Console.WriteLine("O número  maior é o" + numero2);
+               }
+            */
+
+
+            //Peça um número de 1 a 12 e informe a estação do ano correspondente(1 a 3: verão, 4 a 6: outono, etc).
+
+            /*  Console.WriteLine("");
+              int num = int.Parse(Console.ReadLine());
+
+              if (num >= 1 && num <= 3)
+              {
+                  Console.WriteLine("Verao");
+
+              }
+
+              else if (num > 3 && num <= 6)
+              {
+                  Console.WriteLine("Outono");
+
+              }
+              else if (num > 6 && num <= 9)
+              {
+                  Console.WriteLine("Inverno");
+
+
+
+              }
+              else if (num > 9 && num <= 12)
+              {
+                  Console.WriteLine("Primavera");
+
+              }
+              else 
+                  Console.WriteLine("Mês invalido");
+              }
+            */
+            #endregion
+
+            #region LISTA3
+            /* Console.WriteLine("");
+
+
+             for (int i = 1; i <= 20; i++)
+             {
+                 int quadrado = i * i;
+
+                 Console.WriteLine("" + quadrado);
+            }
+             */
+
+
+
+            //9. Peça dois números inteiros e exiba todos os números entre eles (inclusive), em ordem crescente.
+
+
+            /* Console.WriteLine("Digite um numero");
+              int numero1 = int.Parse(Console.ReadLine());
+
+              Console.WriteLine("Digite outro numero");
+              int numero2 = int.Parse(Console.ReadLine());
+
+              int minimo = Math.Min(numero1, numero2);
+              int maximo = Math.Max(numero1, numero2);
+
+
+            for (int i = minimo; i <= maximo; i++)
+            {
+
+                Console.WriteLine(i + " ");
+
+            
+              } */
+               
+            /*   Console.WriteLine("Digite um numero");
+               int numero1 = int.Parse(Console.ReadLine());
+
+               Console.WriteLine("Digite outro numero");
+               int numero2 = int.Parse(Console.ReadLine());
+
+               int minimo = Math.Min(numero1, numero2);
+               int maximo = Math.Max(numero1, numero2);
+               Console.Clear();
+
+
+               while (minimo <= maximo) 
+               {
+
+
+                   Console.WriteLine(minimo);
+                   minimo++;
+
+               }
+
+
+            int saldo = 100;
+
+            while (saldo > 0)
+            {
+
+                Console.Write("Digite o valor a ser sacado: ");
+                int saque = int.Parse(Console.ReadLine());
+
+                if (saque > saldo)
+                {
+
+                    Console.Write("Valor maior que seu saldo.\n");
+                }
+                else
+                {
+                    saldo -= saque;
+                    Console.WriteLine($"Seu saldo é {saldo}");
+                }
+            }
+            */
+            #endregion
+            #region LISTA4
+            // Receba o número de um andar(1 a 3) e exiba a descrição: 1 – Térreo, 2 – Primeiro Andar, 3 – Segundo Andar. 
+            /* Console.WriteLine("");
+             int andar = int.Parse(Console.ReadLine());
+
+             switch (andar)
+             {
+                 case 1: Console.WriteLine("terreo");
+                     break;
+                 case 2:
+                     Console.WriteLine("Primeiro Andar");
+                     break;
+                 case 3:
+                     Console.WriteLine("Segundo andar");
+                     break;
+
+                 default: Console.WriteLine("Andar inválido");
+                     break;
+             }
+            */
+
+            //7.Peça o nome de um curso(ADS, SI, CC) e exiba a carga horária estimada
+            /*
+                        Console.Write("Digite o nome do curso (ADS, SI, CC): ");
+                        string nome = Console.ReadLine().ToUpper();
+
+
+                        switch (nome)
+                        {
+                            case "ADS": Console.WriteLine("3000 horas");
+                                break;
+                            case "SI": Console.WriteLine("4000 horas");
+                                break;
+                            case "CC": Console.WriteLine("4500h");
+                                break;
+                            default: Console.WriteLine("Curso inválido");
+                                break;
+                      }
+            */
+
+
+
+            //Peça um número e exiba a contagem de 1 até ele com `do while`. 
+
+            /*  Console.WriteLine("");
+              int numdigitado = int.Parse(Console.ReadLine());
+              Console.Clear();
+              int i = 1;
+              do
+              {
+
+                  Console.WriteLine(i);
+                 i++;
+              }
+              while ( i < numdigitado );
+            */
+            #endregion
+
+            //Peça valores até que a média deles ultrapasse 100. 
+
+
+            /*    double numero;
+                double soma = 0;    
+                int contador = 1;
+                ;
+
+
+                do
+                {
+                    Console.WriteLine();
+                     numero = int.Parse(Console.ReadLine());
+                   soma += numero;
+                    contador++;
+                   Console.WriteLine(soma) ;
+                } while ( (numero / contador) < 100);
+               */
+
+            
+        }
+    }
+
+}
+
+
+
+
