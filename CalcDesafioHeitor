@@ -1,0 +1,112 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Threading.Tasks;
+
+
+/* DISCLAIMER: Esse sistema representa um desafio realizado por um colega, onde conforme as palavras dele: "quero uma calculadora que analise o input que você colocou pra decidir se é adição, subtração, divisão ou multiplicação".
+Esse código é unicamente e exclusivamente com intuito de fixação dos conteúdos lecionados pela UNIP, assim como por cursos externos.
+
+
+Abaixo está um raciocinio básico, para entender como iria realizar o desafio.
+
+ PRECISO FAZER ADICAO SUBTRACAO DIVISAO E MULTIPLICACAO USANDO REGEX
+  ele vai precisar analisar
+  encaixar num case
+  e fazer o calculo
+  para isso
+  preciso de 2 variaveis
+  numero 1 
+  numero 2
+  string opcao
+
+      regex precisar separar numero 1 do numero 2, vai precisar colocar a opcao +-/* no case
+  retornar n1 e n2 pra variavel de calculo 
+  retornar o resutlado 
+
+
+      OPCIONAIS - CLEANAR O CONSOLE
+  DEFAULT OPERACAO INVALIDA
+  CASE 1 - AD 2 - SUB  3- DIV 4- MULT
+           */
+
+
+namespace CalcHeitor
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string Input;
+            Regex regex = new Regex(@"^\s*([-+]?\d+)\s*([\+\-\*/])\s*([-+]?\d+)\s*$");
+
+           
+            do
+            {
+
+                Console.Clear();
+                Console.WriteLine("Digite a expressão, seguindo o exemplo '' 8 + 5'', ou digite ''sair'' para parar.");
+                Input = Console.ReadLine();
+
+                if (Input.ToLower() == "sair")
+                    break;
+
+                Match match = regex.Match(Input);
+
+                if (match.Success)
+                {
+                    int n1 = int.Parse(match.Groups[1].Value);
+                    string operador = match.Groups[2].Value;
+                    int n2 = int.Parse(match.Groups[3].Value);
+
+
+
+
+
+                    switch (operador)
+                    {
+                        case "+":
+                            Console.WriteLine($"Resultado: {n1 + n2}");
+                            break;
+                        case "-":
+                            Console.WriteLine($"Resultado: {n1 - n2}");
+                            break;
+                        case "/":
+
+                            if (n2 != 0)
+                                Console.WriteLine($"Resultado: {n1 / n2}");
+
+                            else
+                                Console.WriteLine("Divisão por 0 não é valida");
+                            break;
+                        case "*":
+                            Console.WriteLine($"Resultado: {n1 * n2}");
+                            break;
+
+                        default:
+
+                            Console.WriteLine("Operação inválida, tente novamente");
+                            break;
+                    }
+                }
+                else 
+                {
+                    Console.Clear();
+                    Console.WriteLine("Entrada inválida, certifique-se de usar o formato correto (ex: 9 + 6)");
+                }
+                
+                Thread.Sleep(2000);
+                Console.Write("Pressione qualquer tecla para continuar");
+                Console.ReadKey();
+
+
+            } while (true);
+        }
+    }
+}
+
